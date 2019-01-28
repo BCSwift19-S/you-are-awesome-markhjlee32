@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,41 +15,55 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="YouAreAwesome" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="mcT-Vw-vfE">
+                                <rect key="frame" x="30" y="65" width="315" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="VyF-j5-rn6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="27"/>
+                                <color key="textColor" red="1" green="0.40673852449999998" blue="0.31061684109999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="T3J-mu-kEe">
+                                <rect key="frame" x="16" y="271" width="343" height="480"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="480" id="Opd-YU-Xsw"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5m-4t-4hA">
-                                <rect key="frame" x="135" y="183" width="104" height="30"/>
+                                <rect key="frame" x="116" y="210" width="143" height="30"/>
                                 <state key="normal" title="Show Message"/>
                                 <connections>
                                     <action selector="showMessagePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yjV-jU-spd"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="mcT-Vw-vfE">
-                                <rect key="frame" x="87" y="75" width="201" height="0.0"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.4067385244713646" blue="0.31061684108254284" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.77750968458528069" green="1" blue="0.87720146954906464" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="mcT-Vw-vfE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="55" id="5Tn-Yc-cX2"/>
-                            <constraint firstItem="mcT-Vw-vfE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="5ib-Gd-hEM"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mcT-Vw-vfE" secondAttribute="trailing" constant="87" id="Ix5-tx-vHx"/>
-                            <constraint firstItem="f5m-4t-4hA" firstAttribute="top" secondItem="mcT-Vw-vfE" secondAttribute="bottom" constant="108" id="QdX-KI-AM5"/>
-                            <constraint firstItem="f5m-4t-4hA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="135" id="g8F-lV-2RY"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f5m-4t-4hA" secondAttribute="trailing" constant="136" id="uld-EU-vgC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="T3J-mu-kEe" secondAttribute="bottom" constant="27" id="8Zw-dB-b7g"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mcT-Vw-vfE" secondAttribute="trailing" constant="30" id="E2M-Oj-rto"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f5m-4t-4hA" secondAttribute="trailing" constant="116" id="JHp-ux-02x"/>
+                            <constraint firstItem="f5m-4t-4hA" firstAttribute="top" secondItem="mcT-Vw-vfE" secondAttribute="bottom" constant="25" id="JqN-j4-UMz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="T3J-mu-kEe" secondAttribute="trailing" constant="16" id="M7N-5Q-uOm"/>
+                            <constraint firstItem="T3J-mu-kEe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="PWo-W3-q9U"/>
+                            <constraint firstItem="mcT-Vw-vfE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="WWZ-yI-Ge7"/>
+                            <constraint firstItem="T3J-mu-kEe" firstAttribute="top" secondItem="f5m-4t-4hA" secondAttribute="bottom" constant="31" id="bYG-JH-4hZ"/>
+                            <constraint firstItem="mcT-Vw-vfE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="21" id="ecv-if-PCg"/>
+                            <constraint firstItem="f5m-4t-4hA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="116" id="m73-Ba-Jtw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="awesomeImageView" destination="T3J-mu-kEe" id="Yhg-KS-0TA"/>
                         <outlet property="messageLabel" destination="mcT-Vw-vfE" id="dfc-dX-T7a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="135.19999999999999" y="133.00492610837438"/>
         </scene>
     </scenes>
 </document>
