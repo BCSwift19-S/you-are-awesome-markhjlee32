@@ -33,8 +33,28 @@
                                     <constraint firstAttribute="height" constant="480" id="Opd-YU-Xsw"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play Sound:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ht-OQ-7tg">
+                                <rect key="frame" x="16" y="215" width="101" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="101" id="Uxc-2Q-Rgy"/>
+                                    <constraint firstAttribute="height" constant="23" id="zro-ae-WeV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ccl-lb-flX">
+                                <rect key="frame" x="125" y="211" width="51" height="31"/>
+                                <connections>
+                                    <action selector="soundSwitchPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="MM7-gz-AKo"/>
+                                </connections>
+                            </switch>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5m-4t-4hA">
-                                <rect key="frame" x="116" y="210" width="143" height="30"/>
+                                <rect key="frame" x="220" y="208" width="139" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="139" id="hQg-xq-ZVh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Show Message"/>
                                 <connections>
                                     <action selector="showMessagePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yjV-jU-spd"/>
@@ -45,20 +65,23 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="T3J-mu-kEe" secondAttribute="bottom" constant="27" id="8Zw-dB-b7g"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mcT-Vw-vfE" secondAttribute="trailing" constant="30" id="E2M-Oj-rto"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f5m-4t-4hA" secondAttribute="trailing" constant="116" id="JHp-ux-02x"/>
-                            <constraint firstItem="f5m-4t-4hA" firstAttribute="top" secondItem="mcT-Vw-vfE" secondAttribute="bottom" constant="25" id="JqN-j4-UMz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="T3J-mu-kEe" secondAttribute="trailing" constant="16" id="M7N-5Q-uOm"/>
                             <constraint firstItem="T3J-mu-kEe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="PWo-W3-q9U"/>
+                            <constraint firstItem="2Ht-OQ-7tg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="QoZ-BF-DOo"/>
+                            <constraint firstItem="ccl-lb-flX" firstAttribute="top" secondItem="mcT-Vw-vfE" secondAttribute="bottom" constant="26" id="SBx-Vi-thd"/>
+                            <constraint firstItem="f5m-4t-4hA" firstAttribute="top" secondItem="mcT-Vw-vfE" secondAttribute="bottom" constant="23" id="SSb-lG-Vdm"/>
+                            <constraint firstItem="ccl-lb-flX" firstAttribute="leading" secondItem="2Ht-OQ-7tg" secondAttribute="trailing" constant="8" id="Tsd-Ih-KRn"/>
                             <constraint firstItem="mcT-Vw-vfE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="WWZ-yI-Ge7"/>
-                            <constraint firstItem="T3J-mu-kEe" firstAttribute="top" secondItem="f5m-4t-4hA" secondAttribute="bottom" constant="31" id="bYG-JH-4hZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f5m-4t-4hA" secondAttribute="trailing" constant="16" id="WeK-fP-9qH"/>
                             <constraint firstItem="mcT-Vw-vfE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="21" id="ecv-if-PCg"/>
-                            <constraint firstItem="f5m-4t-4hA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="116" id="m73-Ba-Jtw"/>
+                            <constraint firstItem="2Ht-OQ-7tg" firstAttribute="top" secondItem="mcT-Vw-vfE" secondAttribute="bottom" constant="30" id="py3-A1-WEp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="awesomeImageView" destination="T3J-mu-kEe" id="Yhg-KS-0TA"/>
                         <outlet property="messageLabel" destination="mcT-Vw-vfE" id="dfc-dX-T7a"/>
+                        <outlet property="soundSwitch" destination="ccl-lb-flX" id="ap6-1w-u9J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
