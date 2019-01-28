@@ -52,7 +52,7 @@ class ViewController: UIViewController {
     }
     @IBAction func soundSwitchPressed(_ sender: UISwitch) {
         if soundSwitch.isOn == false && soundIndex != -1 {
-                awesomePlayer.stop()
+            awesomePlayer.stop()
         }
     }
     
@@ -76,7 +76,7 @@ class ViewController: UIViewController {
         imageIndex = nonRepeatingRandom(lastNumber: imageIndex, maxValue: numberOfImages)
         awesomeImageView.image = UIImage(named: "image\(imageIndex)")
         
-//        if soundSwitch.isOn == true {
+        //        if soundSwitch.isOn == true {
         if soundSwitch.isOn {
             
             //Get a random number to use in our soundName file
